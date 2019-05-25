@@ -1,0 +1,23 @@
+/*
+COLORS:
+
+Color1: #5d5c61;
+Color2: #379683;
+Color3: #7395ae;
+Color4: #557a95;
+Color5: #b1a296;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #5d5c61;
+}
