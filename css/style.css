@@ -34,6 +34,10 @@ body {
     position: relative;
 }
 
+
+
+
+
 .menu-wrap {
   position: fixed;
   top: 50px;
@@ -607,6 +611,320 @@ body {
 .btn-animated {
     animation: moveInButton .5s ease-out .75s;
     animation-fill-mode: backwards;
+}
+
+/* main section */
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 15rem 0;
+  margin-top: -12vh;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right,  #379683b0, #557a95bb );
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all .2s;
+}
+
+.heading-secondary:hover {
+  transform: skewY(3deg) skewX(10deg) scale(1.1);
+  text-shadow: .4rem 1rem 2rem rgba(0,0,0, 2);
+}
+
+.row {
+  max-width: 956px;
+  margin: 0px auto;
+  display: flex;
+  align-items: left;
+  justify-content: space-around;
+}
+
+.col-1-of-2 h3 {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  font-weight: 700;
+  width: 45%;
+  margin-left: 20px;
+}
+
+
+
+.first-letter:hover:first-letter {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0;
+}
+
+/*images */
+.photo-radius {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #379683;
+}
+
+.img {
+  position: relative;
+}
+
+.img img {
+  position: absolute;
+  right: 100px;
+  top: 30px;
+}
+
+.img .top {
+  animation-name: fade;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.header2 {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #37968386, #557a9585), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(100% 0, 100% 75vh, 0 100%, 0 25vh);
+
+  position: relative;
+  top: -250px;
+}
+
+/* flip cards */
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.flip-card {
+  
+  position: absolute;
+  top: 10rem;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+
+
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* utilities */
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem;
+}
+
+.item1 {
+  background: url(../img/item1.jpg);
+}
+
+.item2 {
+  background: url(../img/item2.jpg);
+}
+
+.item3 {
+  background: url(../img/item3.jpg);
+}
+
+.btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+margin-bottom: 0,3rem;
+background: white;
+  color: #333;
+transition: all 0.5s ease-out;
+}
+
+.btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+margin-bottom: 0.3rem;
+background: #682323;
+  color: #fff;
+transition: all 0.5s ease-out;
+}
+
+.container{
+  max-width:1170px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+  position: absolute;
+  top: 11rem;
+  left: 28rem;
+}
+
+ul{
+  list-style: none;
+  padding:0;
+}
+
+.brand{
+  text-align: center;
+}
+
+.brand span{
+  color:#fff;
+}
+
+.wrapper{
+  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.795);
+}
+
+.wrapper > *{
+  padding: 1em;
+}
+
+.company-info{
+  background:#379683;
+  opacity: 0.8;
+}
+
+.company-info h3, .company-info ul{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.contact{
+  background: #557a95;
+  opacity: .8;
+
+}
+
+/* FORM STYLES */
+.contact form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:20px;
+}
+
+.contact form label{
+  display:block;
+}
+
+.contact form p{
+  margin:0;
+}
+
+.contact form .full{
+  grid-column: 1 / 3;
+}
+
+.contact form button, .contact form input, .contact form textarea{
+  width:100%;
+  padding:1em;
+  border:1px solid #c9e6ff;
+}
+
+.contact form button{
+  background:#379683;
+  border:0;
+  text-transform: uppercase;
+}
+
+.contact form button:hover,.contact form button:focus{
+  background:#557a95;
+  color:#fff;
+  outline:0;
+  transition: background-color 2s ease-out;
+}
+
+/* LARGE SCREENS */
+@media(min-width:700px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > *{
+    padding:2em;
+  }
+
+  .company-info h3, .company-info ul, .brand{
+    text-align: left;
+  }
+}
+.footer{
+  position: relative;
+}
+
+.copyright {
+
+-webkit-clip-path: polygon(100% 75%, 0% 100%, 100% 100%);
+clip-path: polygon(100% 75%, 0% 100%, 100% 100%);
+position: absolute;
+background-color: #5d5c61;
+
 }
 
 
